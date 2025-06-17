@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+import random
+import string
+from colorama import Fore
+
+def generate_random_string(Lng):
+    all_chars = string.ascii_letters + string.digits + string.punctuation
+    random_string = ''.join(random.choice(all_chars) for _ in range (Lng))
+    return random_string
+
+try:
+    Lng = int(input("pswdlength: "))
+    if 1 <= Lng <= 50:
+          gen_string = generate_random_string(Lng)
+          print(gen_string)
+    else:
+        print(Fore.RED + "Input is outside of the valid range! Please input a number between 1 and 50.")
+except ValueError:
+        print(Fore.RED + "Input is not an Integer! Please input a number between 1 and 50.")
+    # this is a program for generating secure passwords
+    # basically the program should take an input between 1 and 50 and output a string of random chars with that number of charaters to the total string. 
