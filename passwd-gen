@@ -17,5 +17,5 @@ try:
         print(Fore.RED + "Input is outside of the valid range! Please input a number between 1 and 50.")
 except ValueError:
         print(Fore.RED + "Input is not an Integer! Please input a number between 1 and 50.")
-    # this is a program for generating secure passwords
+    # this is a program for generating ""secure"" passwords (not really secure lol bc the terminal logs everything, even if the psuedo-random strings have a pretty good arbitrary amount of bits of security [idk I didn't count])
     # basically the program should take an input between 1 and 50 and output a string of random chars with that number of charaters to the total string. 
